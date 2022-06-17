@@ -21,6 +21,23 @@ const promiseOutput = (emosi) => {
   });
 };
 
+function hitung(data, feel) {
+  let counter = 0;
+  if (feel == "marah") {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].hasil == "marah") {
+        counter++;
+      }
+    }
+  } else {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].hasil == "tidak marah") {
+        counter++;
+      }
+    }
+  }
+  return counter;
+}
 
 module.exports = {
   promiseOutput,
